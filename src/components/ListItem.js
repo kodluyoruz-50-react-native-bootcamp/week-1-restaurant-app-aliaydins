@@ -8,21 +8,19 @@ return(
             <View>
                 <Image style={styles.imgContainer} resizeMode='stretch'source={{uri:props.dataImage}}/>
             </View>
+
             <View style={styles.infoContainer}>
-                
+
                 <View style={styles.infoLeftContainer}> 
                     <View>
                         <Text style={styles.title}>{props.dataName}</Text>
                         <Text style={styles.lightTitle}>{props.dataLocation}</Text>
                     </View>
                     <View>
-                        {
-                        props.dataIsPopular &&<Image resizeMode='stretch' style={styles.burn} source={require('../assets/burn.png')}/>
-                        }
-                         
-                    </View>
-                    
+                        {props.dataIsPopular &&<Image resizeMode='stretch' style={styles.burn} source={require('../assets/burn.png')}/>}          
+                    </View>           
                 </View>
+
                 <View style={styles.infoRightContainer}>
                     <Image  resizeMode='stretch' style={styles.like} source={require('../assets/like.png')}/>  
                     <Text style={styles.likeCount}>{props.dataLikes}</Text>                            
@@ -107,12 +105,6 @@ const styles=StyleSheet.create({
         alignSelf:'center',
         width:Dimensions.get('window').width*0.048,
     }
-
-    
-
-    
-    
-
 })
 
 export {ListItem};
